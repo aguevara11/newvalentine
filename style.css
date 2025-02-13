@@ -35,14 +35,15 @@ body {
 }
 
 .snoopy-container {
-    position: fixed;
-    bottom: 20px; /* Moves it up slightly from the bottom */
+    position: absolute;
+    top: 70%; /* Moves it closer to the white box */
     left: 50%;
-    transform: translateX(-50%); /* Centers it */
-    z-index: -1; /* Puts it above the background but behind text */
+    transform: translate(-50%, -50%); /* Keeps it centered */
+    z-index: 1; /* Ensures it's above the background */
 }
 
 .snoopy-gif {
-    width: 200px; /* Adjust size as needed */
-    opacity: 0.8; /* Makes it blend slightly */
+    width: 300px; /* Increase size */
+    max-width: 100%; /* Ensures it resizes well */
+    opacity: 1; /* Keep it fully visible */
 }
