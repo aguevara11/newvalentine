@@ -10,7 +10,7 @@ const questions = [
     {question: "What’s the nickname I call you the most? ( I fact-checked this)", options: ["Evita", "Amor", "Poo", "Eva"], answer: 1},
     {question: "What’s one adorable habit you have that I love?", options: ["Frolicking", "Eating my food!", "Farting", "Pooping"], answer: 0},
     {question: "What has been one of my favorite moments with you lately?", options: ["The redbull test", "Taking you out to dinner when you visited me", "Going to see bad movies", "Golfing!"], answer: 1},
-    {question: "If you win this quiz, what do you think a big surprise is?", options: ["A heartfelt letter", "A cute gift", "A special date night", "Me asking you to be my Valentine"], answer: 3},
+    {question: "If you win this quiz, what do you think the surprise is?", options: ["A heartfelt letter", "A cute gift", "A special date night", "Me asking you to be my Valentine"], answer: 3},
 ];
 
 function updateLivesDisplay() {
