@@ -1,0 +1,32 @@
+/* quiz.html */
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadQuestion()">
+    <div class="container">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <div class="lives">Lives: <span id="lives">3</span></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* try-again.html */
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Try Again</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Try Again!</h1>
+        <p>Oops! You lost all your lives.</p>
+        <button class="button" onclick="window.location.href='quiz.html'">Restart Quiz</button>
+    </div>
+</body>
+</html>
