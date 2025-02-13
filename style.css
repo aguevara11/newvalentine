@@ -1,0 +1,35 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8d5e3;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pixel-art {
+    width: 100px;
+    margin: 20px auto;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: #ff6699;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.lives {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
