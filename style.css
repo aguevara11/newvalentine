@@ -33,3 +33,16 @@ body {
     right: 10px;
     font-size: 20px;
 }
+
+.snoopy-container {
+    position: fixed;
+    bottom: 20px; /* Moves it up slightly from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it */
+    z-index: -1; /* Puts it above the background but behind text */
+}
+
+.snoopy-gif {
+    width: 200px; /* Adjust size as needed */
+    opacity: 0.8; /* Makes it blend slightly */
+}
