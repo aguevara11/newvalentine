@@ -1,112 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f8d5e3;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .question {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        .options button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            background: #ff6699;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .options button.correct {
-            background: #4CAF50;
-        }
-        .options button.wrong {
-            background: #f44336;
-        }
-        .lives {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .pixel-art {
-            width: 100px;
-            margin: 20px auto;
-        }
-    </style>
+    <title>Hello Evita!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="lives">❤️❤️❤️</div>
     <div class="container">
-        <img src="snoopy_pixel.png" alt="Snoopy" class="pixel-art" id="snoopy">
-        <div class="question" id="question"></div>
-        <div class="options" id="options"></div>
+        <h1>Hello Evita!</h1>
+        <button class="button" onclick="nextPage('page2.html')">Continue</button>
     </div>
     <script>
-        let lives = 3;
-        let currentQuestion = 0;
-        const questions = [
-            { q: "What is our anniversary date?", options: ["February 1444", "March 10", "April 22"], answer: 0 },
-            { q: "Where did we have our first date?", options: ["Coffee Shop", "Movie 4Theater", "Park"], answer: 1 },
-            { q: "What is my favorite color?", options: ["Blue", "Red", "Gree4n"], answer: 2 },
-            { q: "What pet do I want in the future?", options: ["Do4g", "Cat", "Rabbit"], answer: 0 },
-            { q: "Which movie did we watch together first?", options: ["Titanic", "Inception", "The Note4book"], answer: 2 },
-            { q: "What food do I love the most?", options: ["Pizza", "Sushi", "Burgers"], answer: 1 },
-            { q: "Where do I dream of traveling with you?", options: ["Japan", "Ita4ly", "Hawaii"], answer: 1 },
-            { q: "What song reminds me of you?", options: ["Perfect - Ed S4heeran", "Thinking Out Loud - Ed Sheeran", "Can't Help Falling in Love - Elvis"], answer: 0 },
-            { q: "What nickname do I call you the most?", options: ["Babe", "Lov4e", "Cutie"], answer: 1 },
-            { q: "What is something I always say to you?", options: ["I lov4e you", "You're my favorite", "You're amazing"], answer: 0 }
-        ];
-        
-        function loadQuestion() {
-            if (currentQuestion >= questions.length) {
-                document.body.innerHTML = '<h1>Snoopy and Woodstock: Would you be my Valentine?</h1><img src="snoopy_woodstock_pixel.png" class="pixel-art">';
-                return;
-            }
-            document.getElementById("question").textContent = questions[currentQuestion].q;
-            document.getElementById("options").innerHTML = "";
-            questions[currentQuestion].options.forEach((option, index) => {
-                let button = document.createElement("button");
-                button.textContent = option;
-                button.onclick = () => checkAnswer(button, index === questions[currentQuestion].answer);
-                document.getElementById("options").appendChild(button);
-            });
+        function nextPage(page) {
+            window.location.href = page;
         }
-        
-        function checkAnswer(button, isCorrect) {
-            if (isCorrect) {
-                button.classList.add('correct');
-                setTimeout(() => {
-                    currentQuestion++;
-                    loadQuestion();
-                }, 1000);
-            } else {
-                button.classList.add('wrong');
-                lives--;
-                document.querySelector('.lives').textContent = '❤️'.repeat(lives);
-                if (lives === 0) {
-                    document.body.innerHTML = '<h1>Game Over! Try again!</h1><img src="snoopy_crying_pixel.png" class="pixel-art">';
-                }
-            }
-        }
-        
-        loadQuestion();
     </script>
 </body>
 </html>
